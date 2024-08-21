@@ -3,15 +3,15 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f9f9f9;
+    color: #707078; /* New text color (Gray) */
+    background-color: #DAF0EE; /* Background color (Mint Green) */
     line-height: 1.6;
 }
 
 /* Header */
 header {
-    background-color: #1f8f55;
-    color: white;
+    background-color: #0A122A; /* Dark Navy */
+    color: #FFFFFF; /* White */
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -40,14 +40,14 @@ nav {
 }
 
 .nav-links a {
-    color: white;
+    color: #FFFFFF; /* White */
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #d4e157;
+    color: #EF8354; /* Warm Orange */
 }
 
 /* Blog Post Styles */
@@ -55,7 +55,7 @@ nav {
     max-width: 800px;
     margin: 3rem auto;
     padding: 0 1rem;
-    background-color: white;
+    background-color: #FFFFFF; /* White */
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -64,47 +64,48 @@ nav {
 .post-featured-image img {
     width: 100%;
     height: auto;
-    border-bottom: 5px solid #1f8f55;
+    border-bottom: 5px solid #0A122A; /* Dark Navy */
 }
 
 .post-content h1 {
     font-size: 2rem;
     margin-top: 1.5rem;
-    color: #1f8f55;
+    color: #0A122A; /* Dark Navy */
 }
 
 .post-meta {
     font-size: 0.9rem;
-    color: #777;
+    color: #707078; /* Gray */
     margin-bottom: 1.5rem;
 }
 
 .post-intro {
     font-size: 1.2rem;
     font-weight: 400;
-    color: #444;
+    color: #707078; /* Gray */
     margin-bottom: 2rem;
     line-height: 1.8;
 }
 
 .post-content h2 {
     font-size: 1.5rem;
-    color: #1f8f55;
+    color: #0A122A; /* Dark Navy */
     margin-top: 2rem;
 }
 
 .post-content p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
+    color: #707078; /* Gray */
 }
 
 blockquote {
     margin: 2rem 0;
     padding: 1rem;
-    background-color: #f0f8f1;
-    border-left: 5px solid #1f8f55;
+    background-color: #DAF0EE; /* Mint Green */
+    border-left: 5px solid #EF8354; /* Warm Orange */
     font-style: italic;
-    color: #555;
+    color: #707078; /* Gray */
 }
 
 .post-conclusion {
@@ -112,13 +113,13 @@ blockquote {
     font-weight: 500;
     margin-top: 2rem;
     padding: 1rem 0;
-    border-top: 2px solid #f0f0f0;
+    border-top: 2px solid #F0F0F0;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #0A122A; /* Dark Navy */
+    color: #FFFFFF; /* White */
     text-align: center;
     padding: 1rem 0;
     font-size: 0.9rem;
