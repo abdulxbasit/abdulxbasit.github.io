@@ -1,36 +1,43 @@
 const coin = document.getElementById('coin');
 const tossBtn = document.getElementById('tossBtn');
 const result = document.getElementById('result');
-const score1 = document.getElementById('score1');
-const score2 = document.getElementById('score2');
+const option1Input = document.getElementById('option1');
+const option2Input = document.getElementById('option2');
+const sideAText = document.getElementById('sideAText');
+const sideBText = document.getElementById('sideBText');
 
-let player1Score = 0;
-let player2Score = 0;
-let currentPlayer = 1;
+function updateCoinText() {
+    sideAText.textContent = option1Input.value || 'Option 1';
+    sideBText.textContent = option2Input.value || 'Option 2';
+}
+
+option1Input.addEventListener('input', updateCoinText);
+option2Input.addEventListener('input', updateCoinText);
 
 function tossCoin() {
+    const option1 = option1Input.value.trim() || 'Option 1';
+    const option2 = option2Input.value.trim() || 'Option 2';
+
+    if (option1 === option2) {
+        result.textContent = "Please enter two different options.";
+        return;
+    }
+
     const random = Math.random();
-    const rotation = random < 0.5 ? 'rotateY(180deg)' : 'rotateY(0deg)';
-    coin.style.transform = `${rotation} rotateX(1800deg)`;
-    
+    const rotations = 5 + Math.floor(Math.random() * 5); // 5 to 9 rotations
+    const degree = rotations * 360 + (random < 0.5 ? 0 : 180);
+
+    coin.style.transform = `rotateY(${degree}deg)`;
     tossBtn.disabled = true;
-    
+
     setTimeout(() => {
-        const outcome = random < 0.5 ? 'Tails' : 'Heads';
-        result.textContent = `${outcome}! Player ${currentPlayer} wins this round.`;
-        
-        if (currentPlayer === 1) {
-            player1Score++;
-            score1.textContent = player1Score;
-        } else {
-            player2Score++;
-            score2.textContent = player2Score;
-        }
-        
-        currentPlayer = currentPlayer === 1 ? 2 : 1;
-        tossBtn.textContent = `Player ${currentPlayer}'s Turn`;
+        const outcome = random < 0.5 ? option1 : option2;
+        result.textContent = `Result: ${outcome}`;
         tossBtn.disabled = false;
-    }, 1000);
+    }, 3000);
 }
 
 tossBtn.addEventListener('click', tossCoin);
+
+// Initialize coin text
+updateCoinText();
