@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     color: #333;
 }
@@ -24,18 +24,23 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
-.options-container {
+.options-container, .toss-count-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
-input[type="text"] {
+input[type="text"], select {
     width: 45%;
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
+}
+
+.toss-count-container label {
+    display: flex;
+    align-items: center;
 }
 
 .coin-container {
@@ -48,7 +53,7 @@ input[type="text"] {
     height: 200px;
     margin: 0 auto;
     position: relative;
-    transition: transform 3s ease-in-out;
+    transition: transform 1s ease-in-out;
     transform-style: preserve-3d;
 }
 
@@ -100,10 +105,14 @@ button:active {
     transform: translateY(0);
 }
 
-#result {
+#results {
+    margin-top: 1rem;
+}
+
+#currentToss, #finalResult {
     font-size: 1.2rem;
     font-weight: bold;
-    margin-top: 1rem;
+    margin: 0.5rem 0;
     color: #4a4a4a;
 }
 
