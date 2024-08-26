@@ -29,10 +29,11 @@ function tossCoin() {
 
     coin.style.transform = `rotateY(${degree}deg)`;
     tossBtn.disabled = true;
+    result.textContent = "Tossing...";
 
     setTimeout(() => {
-        const outcome = random < 0.5 ? option1 : option2;
-        result.textContent = `Result: ${outcome}`;
+        const winningOption = random < 0.5 ? option1 : option2;
+        result.innerHTML = `<span class="winner">Winner: ${winningOption}</span>`;
         tossBtn.disabled = false;
     }, 3000);
 }
