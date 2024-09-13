@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Multi-Toss Coin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Multi-Toss Coin</h1>
+        <div class="options-container">
+            <input type="text" id="option1" placeholder="Enter option 1">
+            <input type="text" id="option2" placeholder="Enter option 2">
+        </div>
+        <div class="toss-count-container">
+            <label for="tossCount">Number of tosses:</label>
+            <select id="tossCount">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div class="coin-container">
+            <div class="coin" id="coin">
+                <div class="side-a">
+                    <span id="sideAText"></span>
+                </div>
+                <div class="side-b">
+                    <span id="sideBText"></span>
+                </div>
+            </div>
+        </div>
+        <button id="tossBtn">Start Tosses</button>
+        <div id="results">
+            <p id="currentToss"></p>
+            <p id="finalResult"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
