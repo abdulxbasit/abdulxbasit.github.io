@@ -1,0 +1,141 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+}
+
+.options-container, .toss-count-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"], select {
+    width: 45%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.toss-count-container label {
+    display: flex;
+    align-items: center;
+}
+
+.coin-container {
+    perspective: 1000px;
+    margin-bottom: 2rem;
+}
+
+.coin {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.side-a, .side-b {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    backface-visibility: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.side-a {
+    background: linear-gradient(45deg, #ffd700, #ffec8b);
+}
+
+.side-b {
+    background: linear-gradient(45deg, #c0c0c0, #e6e6e6);
+    transform: rotateY(180deg);
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1rem 0;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#results {
+    margin-top: 1rem;
+}
+
+#currentToss, #finalResult {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #4a4a4a;
+}
+
+.winner {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #4CAF50;
+    background-color: #e8f5e9;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: winnerPulse 2s infinite;
+}
+
+@keyframes winnerPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
